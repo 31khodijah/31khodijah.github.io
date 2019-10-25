@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Produk</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap'); */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            /* background-color: #f3f5f9; */
+            background-image: url("img/bgputih.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .wrapper {
+            display: flex;
+            position: relative;
+        }
+
+        .wrapper .sidebar {
+            width: 200px;
+            height: 100%;
+            background: rgba(160, 160, 161, 0.7);
+            padding: 30px 0px;
+            position: fixed;
+        }
+
+        .wrapper .sidebar h2 {
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .wrapper .sidebar ul li {
+            padding: 15px;
+            border-bottom: 1px solid #bdb8d7;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .wrapper .sidebar ul li a {
+            color: black;
+            display: block;
+        }
+
+        .wrapper .sidebar ul li a .fas {
+            width: 25px;
+        }
+
+        .wrapper .sidebar ul li:hover {
+            background-color: #bdb8d7;
+        }
+
+        /* .wrapper .sidebar ul li:hover a {
+            color: #fff;
+        } */
+
+        .wrapper .sidebar .social_media {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .wrapper .sidebar .social_media a {
+            display: block;
+            width: 40px;
+            background: #594f8d;
+            height: 40px;
+            line-height: 45px;
+            text-align: center;
+            margin: 0 5px;
+            color: #bdb8d7;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .wrapper .main_content {
+            width: 100%;
+            /* text-align: center; */
+            margin-left: 200px;
+        }
+
+        /* .wrapper .main_content .header {
+            padding: 20px;
+            background: #fff;
+            color: #717171;
+            border-bottom: 1px solid #e0e4e8;
+        } */
+
+        .wrapper .main_content .info {
+            width: 80%;
+            margin: 180px auto;
+            color: #717171;
+            line-height: 25px;
+        }
+
+        .info h4 {
+            /* text-align: center; */
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 20pt;
+        }
+        h5{
+            font-size: 14pt;
+        }
+
+        .info img {
+            width: 30%;
+            height: 30%;
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            margin: 20px 0;
+        }
+
+        .main_content .info a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgb(60, 175, 121);
+            color: #fff;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        @media (max-height: 500px) {
+            .social_media {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>E-PONIK</h2>
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="profil.html"><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="produk.html"><i class="fas fa-shopping-bag"></i>Produk</a></li>
+                <li><a href="keranjang.html"><i class="fas fa-cart-plus"></i>Keranjang</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+
+            </ul>
+        </div>
+        <div class="main_content">
+            <!-- <div class="header">Welcome to E-PONIK</div> -->
+            <div class="info">
+                <h4>Pupuk Nasa</h4>
+
+                <img src="img/nasa.png" alt="nasa">
+                <p>Ini adalah produk pupuk yang dapat membuat tanaman anda akan lebih baik pada saat 
+                penanaman, sehingga dapat menghasilkan hasil panen yang bagus dan berkualitas sehingga
+                diminati oleh para konsumen.</p><br>
+                <h5>Harga : Rp. 70.000,00</h5><br>
+                <a href="keranjang.html">Beli Produk</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

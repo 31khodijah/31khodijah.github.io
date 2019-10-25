@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap'); */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            /* background-color: #f3f5f9; */
+            background-image: url("img/bgputih.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .wrapper {
+            display: flex;
+            position: relative;
+        }
+
+        .wrapper .sidebar {
+            width: 200px;
+            height: 100%;
+            background: rgba(160, 160, 161, 0.7);
+            padding: 30px 0px;
+            position: fixed;
+        }
+
+        .wrapper .sidebar h2 {
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .wrapper .sidebar ul li {
+            padding: 15px;
+            border-bottom: 1px solid #bdb8d7;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .wrapper .sidebar ul li a {
+            color: black;
+            display: block;
+        }
+
+        .wrapper .sidebar ul li a .fas {
+            width: 25px;
+        }
+
+        .wrapper .sidebar ul li:hover {
+            background-color: #bdb8d7;
+        }
+
+        /* .wrapper .sidebar ul li:hover a {
+            color: #fff;
+        } */
+
+        
+
+        .wrapper .main_content {
+            width: 100%;
+            margin-left: 200px;
+        }
+
+        /* .wrapper .main_content .header {
+            padding: 20px;
+            background: #fff;
+            color: #717171;
+            border-bottom: 1px solid #e0e4e8;
+        } */
+
+        .wrapper .main_content .info {
+            text-align: center;
+            width: 75%;
+            margin: 150px auto;
+            color: #333;
+            line-height: 25px;
+        }
+
+        .main_content .info ul li {
+            display: inline-block;
+            margin: 30px 40px;
+        }
+
+        .main_content .info ul li img {
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background-color: #fff;
+            margin: 15px 0;
+        }
+
+        .main_content .info ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .main_content .info p {
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .main_content .info .tombol {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            float: right;
+            margin: 0 0px 0 0;
+            background-color: #2a9e85;
+            border-radius: 10px;
+        }
+
+        .wrapper .main_content .info div {
+            margin-bottom: 20px;
+        }
+
+        @media (max-height: 500px) {
+            .social_media {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>E-PONIK</h2>
+            <ul>
+                <li><a href="adminhome.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="adminprofil.html"><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="adminproduk.html"><i class="fas fa-shopping-bag"></i>Produk</a></li>
+                <li><a href="keranjang.html"><i class="fas fa-cart-plus"></i>Keranjang</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+
+            </ul>
+        </div>
+        <div class="main_content">
+            <!-- <div class="header">Welcome to E-PONIK</div> -->
+            <div class="info">
+                <h1>Selamat Datang Admin</h1>
+                <p>Pupuk merupakan material yang ditambahkan pada media tanam atau tanaman untuk mencukupi kebutuhan
+                    hara yang
+                    diperlukan tanaman sehingga mampu berproduksi dengan baik. Material pupuk dapat berupa bahan
+                    organik ataupun non-organik (mineral). Pupuk berbeda dari suplemen. Pupuk mengandung bahan baku yang
+                    diperlukan pertumbuhan dan perkembangan tanaman, sementara suplemen seperti hormon tumbuhan
+                    membantu kelancaran proses metabolisme. Meskipun demikian, ke dalam pupuk, khususnya pupuk
+                    buatan, dapat ditambahkan sejumlah material suplemen. Produk diatas merupakan produk
+                    yang banyak diminati oleh para petani dikarenakan kualitas yang baik dan hargaya yang cukup
+                    terjangkau</p>
+                <a href="adminproduk.html" class="tombol">Your Product</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
