@@ -37,7 +37,50 @@
                     <input type="alamat" id="alamat"><br>
                     <label for="nohp">No Telepon</label><br>
                     <input type="nohp" id="nohp"><br>
+                    <label for="myFile">Pilih File</label><br>
+                    <input type="file" id="myFile" multiple size="10" onchange="myFunction()"><br>
+                    <p id="hasil"></p>
                 </form>
+                <script>
+        function myFunction(){
+          var x = document.getElementById("myFile");
+          var txt = "";
+          if ('files' in x) {
+            if (x.files.length == 0) {
+              txt = "Select one or more files.";
+            } else {
+              for (var i = 0; i < x.files.length; i++) {
+                var file = x.files[i];
+                var output = file.name.split('.');
+                if(output[1] === "pdf"){
+                    txt += '<img src="pdf.jpg" alt="Smiley face" height="42" width="42"><br>';
+                }else if(output[1] === "docx" || output[1]==="doc"){
+                    txt += '<img src="doc.png" alt="Smiley face" height="42" width="42"><br>';
+                }else if(output[1] === "css"){
+                    txt += '<img src="css.png" alt="Smiley face" height="42" width="42"><br>';
+                }else if(output[1] === "html"){
+                    txt += '<img src="html.png" alt="Smiley face" height="42" width="42"><br>';
+                }
+                if ('name' in file) {
+                  txt +=  file.name + "<br>";
+                }
+                if ('size' in file) {
+                  txt +=  file.size + " bytes <br>";
+                }
+              }
+            }
+          } 
+          else {
+            if (x.value == "") {
+              txt += "Select one or more files.";
+            } else {
+              txt += "The files property is not supported by your browser!";
+              txt  += "<br>The path of the selected file: " + x.value; 
+            }
+          }
+          document.getElementById("hasil").innerHTML = txt;
+        }
+        </script>
                 <center>
                     <button type="submit" onclick="document.getElementsByClassName('form')[0].submit(validasi())">Edit</button>
                 </center>
