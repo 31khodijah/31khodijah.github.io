@@ -1,3 +1,4 @@
+        /* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap'); */
 
         * {
             margin: 0;
@@ -59,26 +60,7 @@
             color: #fff;
         } */
 
-        .wrapper .sidebar .social_media {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-        }
-
-        .wrapper .sidebar .social_media a {
-            display: block;
-            width: 40px;
-            background: #594f8d;
-            height: 40px;
-            line-height: 45px;
-            text-align: center;
-            margin: 0 5px;
-            color: #bdb8d7;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
+        
 
         .wrapper .main_content {
             width: 100%;
@@ -92,62 +74,37 @@
             border-bottom: 1px solid #e0e4e8;
         } */
 
-        h1 {
-            margin-top: 150px;
-            color: black;
+        .wrapper .main_content .info {
             text-align: center;
-        }
-        /* h2 img{
-            width: 30px;
-            height: 30px;
-        } */
-
-        .table1 {
-            font-family: sans-serif;
-            color: #fff;
-            margin: 50px auto;
-            border-collapse: collapse;
-            width: 50%;
-            border: 1px solid #f2f5f7;
+            width: 75%;
+            margin: 150px auto;
+            color: #333;
+            line-height: 25px;
         }
 
-        .table1 tr th {
-            background: #35A9DB;
-            color: #fff;
-            font-weight: normal;
+        .main_content .info ul li {
+            display: inline-block;
+            margin: 30px 40px;
         }
 
-        .table1,
-        th,
-        td {
-            padding: 8px 20px;
-            text-align: center;
-        }
-        td img{
-            width: 70px;
-            height: 70px;
+        .main_content .info ul li img {
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background-color: #fff;
+            margin: 15px 0;
         }
 
-        .table1 tr {
-            background-color: #8a8a8a;
+        .main_content .info ul li a {
+            text-decoration: none;
+            color: #333;
         }
 
-        .table2 {
-            font-family: sans-serif;
-            color: #fff;
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 20%;
-            border: 1px solid #f2f5f7;
-            font-color:#8a8a8a;
+        .main_content .info p {
+            margin: 20px 0;
+            text-align: justify;
         }
 
-        .table2 tr td {
-            background-color: #f2f5f7; 
-            color: #fff;
-            font-weight: normal;
-        }
-        
         .main_content .info .tombol {
             padding: 10px;
             text-decoration: none;
@@ -158,11 +115,9 @@
             border-radius: 10px;
         }
 
-
         .wrapper .main_content .info div {
             margin-bottom: 20px;
         }
-
 
         @media (max-height: 500px) {
             .social_media {

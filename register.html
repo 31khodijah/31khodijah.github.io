@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
      <link rel="stylesheet" type="text/css" href="register.css">
+      <link rel="stylesheet" type="text/javascript" href="register.js">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,19 +20,63 @@
             <input type="email" id="email">
             <label for="password">Password</label>
             <input type="password" id="password">
-            <label for="alamat">Password</label>
-            <input type="text" id="alamat">
+            <label for="alamat">Alamat</label>
+            <input type="password" id="alamat">
             <label for="nohp">No Telepon</label>
             <input type="number" id="nohp">
-
+            <label for="myFile">Pilih Foto Profil</label><br>
+            <input type="file" id="myFile" multiple size="10" onchange="myFunction()"><br>
+            <p id="hasil"></p>
+        </form>
+       <script>
+        function myFunction(){
+          var x = document.getElementById("myFile");
+          var txt = "";
+          if ('files' in x) {
+            if (x.files.length == 0) {
+              txt = "Select one or more files.";
+            } else {
+              for (var i = 0; i < x.files.length; i++) {
+                var file = x.files[i];
+                var output = file.name.split('.');
+                if(output[1] === "pdf"){
+                    txt += '<img src="pdf.jpg" alt="Smiley face" height="42" width="42"><br>';
+                }else if(output[1] === "docx" || output[1]==="doc"){
+                    txt += '<img src="doc.png" alt="Smiley face" height="42" width="42"><br>';
+                }else if(output[1] === "css"){
+                    txt += '<img src="css.png" alt="Smiley face" height="42" width="42"><br>';
+                }else if(output[1] === "html"){
+                    txt += '<img src="html.png" alt="Smiley face" height="42" width="42"><br>';
+                }
+                if ('name' in file) {
+                  txt +=  file.name + "<br>";
+                }
+                if ('size' in file) {
+                  txt +=  file.size + " bytes <br>";
+                }
+              }
+            }
+          } 
+          else {
+            if (x.value == "") {
+              txt += "Select one or more files.";
+            } else {
+              txt += "The files property is not supported by your browser!";
+              txt  += "<br>The path of the selected file: " + x.value; 
+            }
+          }
+          document.getElementById("hasil").innerHTML = txt;
+        }
+        </script>
         </form>
         <center>
             <button type="submit"
                 onclick="document.getElementsByClassName('form')[0].submit(validasi())">Daftar</button>
+
         </center>
+
         <p><a href="index.html">Sudah Punya Akun</a></p>
     </div>
-<link rel="stylesheet" type="text/javascript" href="register.js">
 </body>
 
 </html>

@@ -10,12 +10,13 @@
             var password = document.getElementById("password").value;
             var alamat = document.getElementById("alamat").value;
             var nohp = document.getElementById("nohp").value;
+            var myFile = document.getElementById("myFile").value;
             console.log(name);
 
-            if (name == "" && email == "" && password == "" && alamat == "" && nohp == "") {
+            if (name == "" && email == "" && password == "" && alamat == "" && nohp == "" && myFile == "") {
                 alert("Data Tidak Lengkap");
                 return false;
-            } else if (name != "" && email != "" && password != "" && alamat != "" && nohp != "") {
+            } else if (name != "" && email != "" && password != "" && alamat != "" && nohp != "" && myFile !="") {
                 alert("Selamat Datang");
                 setTimeout("location.href='home.html'", 10);
             }
@@ -24,3 +25,4 @@
                 return false;
             }
         }
+
