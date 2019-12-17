@@ -123,4 +123,27 @@
             .social_media {
                 display: none !important;
             }
+                /* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap'); */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Josefin Sans', sans-serif;
+      }
+        .main_content .info a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgb(60, 175, 121);
+            color: #fff;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        @media (max-height: 500px) {
+            .social_media {
+                display: none !important;
+            }
         }
