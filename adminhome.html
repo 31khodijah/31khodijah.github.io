@@ -24,61 +24,64 @@
 
             </ul>
         </div>
-     <section class="cards">
+     <!-- <section class="cards"> -->
 
 <div class="card">
 
-    <div class="cardpupuk1">
+    <!-- <div class="cardpupuk1">
       <div class="headerpupuk">
-       <!--  <h1>E-Agro</h1> -->
+        <h1>E-Agro</h1>
       </div>
       <div class="containerpupuk">
-        <!-- <h2>Pupuk Organik</h2>
+        <h2>Pupuk Organik</h2>
         <p class="sub-title">08.00 - 10.40</p>
         <p class="sub-time">R.Aula 1A Fakultas Ilmu Komputer</p>
-        <p class="sub-place">Dosen Diksy Media F. S.Kom., M.Kom</p> -->
+        <p class="sub-place">Dosen Diksy Media F. S.Kom., M.Kom</p>
       </div>
     </div>
 
     <div class="cardpupuk">
       <div class="headerpupuk">
-       <!--  <h1>E-Agro</h1> -->
+        <h1>E-Agro</h1>
       </div>
       <div class="containerpupuk">
-       <!--  <h2>Pupuk Organik</h2>
+        <h2>Pupuk Organik</h2>
         <p class="sub-title">Pupuk Nasa</p>
         <p class="sub-price">Rp 70.000</p>
-        <p class="sub-stock">100</p> -->
+        <p class="sub-stock">100</p>
       </div>
     </div>
 
     <div class="cardpupuk">
       <div class="headerpupuk">
-        <!-- <h1>Senin</h1> -->
+        <h1>Senin</h1>
       </div>
       <div class="containerpupuk">
-        <!--  <h2>Pupuk Organik</h2>
+         <h2>Pupuk Organik</h2>
         <p class="sub-title">Pupuk Nasa</p>
         <p class="sub-price">Rp 70.000</p>
-        <p class="sub-stock">100</p> -->
-      </div>
+        <p class="sub-stock">100</p> 
+      </div>-->
 
    
-<script type="/json/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="/json/javascript">
+<script type="text/javascript" src="JSON/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
     $(document).ready(function () {
         $.getJSON('https://raw.githubusercontent.com/31khodijah/31khodijah.github.io/master/JSON/data.json',
             function (data) {
                 // console.log(data);
                 $.each(data, function (n, response) {
-                    $('.cards').append(
-                        `<div class="card-title bg-green">
-                            <h1>`+response['JenisPupuk']+`</h1>
-                        </div>
-                        <h2>`+response['NamaPupuk']+`</h2>
-                        <p class="sub-tittle">`+response['harga']+`</p>
-                        <p class="sub-price">`+response['stock']+`</p>
-                        <p class="sub-place">`</p>
+                    $('.card').append(
+                    `<div class="cardjadwal">
+                    <div class="headerjadwal">
+                        <h1>`+response['Jenis Pupuk']+`</h1>
+                    </div>
+                    <div class="containerjadwal">
+                        <h2>`+response['Nama Pupuk']+`</h2>
+                        <p class="sub-title">`+response['Harga Pupuk']+`</p>
+                        <p class="sub-time">`+response['Stok Pupuk']+`</p>
+                        <p class="sub-place"></p>
+                    </div>
                     </div>`
                     );
                 })

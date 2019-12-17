@@ -77,7 +77,7 @@
         .wrapper .main_content .info {
             text-align: center;
             width: 75%;
-            margin: 150px auto;
+            margin: 180px -100px;
             color: #333;
             line-height: 25px;
         }
@@ -118,6 +118,52 @@
         .wrapper .main_content .info div {
             margin-bottom: 20px;
         }
+        .card{
+            position: absolute;
+            margin: auto;
+            margin-top: -160px;
+            right: 100px;
+
+            /*border: 2px solid black;*/
+            width:  880px;
+            height: 400px;
+        }
+        div.cardjadwal1 {
+          /*margin-top: -200px;
+          margin-left: 50px;*/
+          margin-left: 30px;
+          margin-right: 30px;
+          display: inline-block;
+          width: 250px;
+          background-color: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          text-align: center;
+          border-radius: 6px; 
+        }
+        
+        div.cardjadwal{
+          /*margin-top: -200px;
+          margin-left: 50px;*/
+          width: 250px;
+          margin-right: 30px;
+          background-color: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          text-align: center;
+          border-radius: 6px;
+          display: inline-block;
+        }
+        
+        div.headerjadwal {
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+        }
+        
+        div.containerjadwal {
+        text-align: left;
+          padding: 10px;
+        }
+        
 
         @media (max-height: 500px) {
             .social_media {
